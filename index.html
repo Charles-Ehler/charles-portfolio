@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Ehler | Learning & Development Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .nav-link:hover {
+            color: #4f46e5;
+        }
+        
+        .active-nav {
+            color: #4f46e5;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-indigo-600">Charles Ehler</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link hover:text-indigo-600 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-indigo-600 transition">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-indigo-600 transition">Skills</a>
+                    <a href="#testimonials" class="nav-link hover:text-indigo-600 transition">Testimonials</a>
+                    <a href="#contact" class="nav-link hover:text-indigo-600 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#about" class="nav-link hover:text-indigo-600 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-indigo-600 transition">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-indigo-600 transition">Skills</a>
+                    <a href="#testimonials" class="nav-link hover:text-indigo-600 transition">Testimonials</a>
+                    <a href="#contact" class="nav-link hover:text-indigo-600 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Innovative Learning Leader & <span class="text-indigo-600">Instructional Design Expert</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        With over a decade of experience, I transform complex operational concepts into engaging learning experiences that drive measurable business results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                            Get In Touch
+                        </a>
+                        <a href="#" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-indigo-100 rounded-full overflow-hidden">
+                        <!-- Placeholder for profile image -->
+                        <div class="absolute inset-0 flex items-center justify-center text-indigo-300">
+                            <i class="fas fa-user-tie text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <!-- Placeholder for about image -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-300">
+                            <i class="fas fa-chalkboard-teacher text-6xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg text-gray-600 mb-6">
+                        Senior Instructional Designer and Learning & Development Program Manager with 10+ years of experience creating impactful training solutions for corporate and operational environments including restaurant, retail, and logistics sectors.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        My expertise spans the full learning lifecycle - from needs analysis and content strategy to development, implementation, and evaluation. I specialize in translating complex operational concepts into engaging, results-driven learning experiences.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-trophy text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Key Achievements</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Built award-winning microlearning programs adopted company-wide
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-vr-cardboard text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Innovation</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Pioneered VR training solutions for warehouse operations
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-sitemap text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Strategy</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Developed LMS strategy supporting 10,000+ employees
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Impact</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Training programs resulted in 30%+ improvement in operational metrics
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Warehouse Training" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
+                            <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">PFS Warehouse Training</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive training program for Portillo's warehouse operations including VR simulations for equipment safety.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">VR Training</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Safety</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Operations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Service Channel Simulation" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
+                            <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">
+                                View Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Service Channel Simulation Training</h3>
+                        <p class="text-gray-600 mb-4">
+                            Interactive simulation training for customer service scenarios with branching decision paths and real-time feedback.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Simulation</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Branching</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Customer Service</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Workday Rollout" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
+                            <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">
+                                View PDF
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">MyPortillo's Workday Rollout Resources</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete training package for enterprise HR system implementation including job aids, videos, and facilitator guides.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">System Training</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Job Aids</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HRIS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="GM Summit" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
+                            <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">
+                                View Video
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">GM Summit Icebreakers</h3>
+                        <p class="text-gray-600 mb-4">
+                            Series of engaging icebreaker activities and team-building exercises for annual leadership summit.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Leadership</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Facilitation</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Skills & Expertise</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-center text-indigo-600">Instructional Design Tools</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-book-open text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">Articulate Storyline</h4>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">Articulate Rise</h4>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-video text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">Camtasia</h4>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">Adobe Creative Suite</h4>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-project-diagram text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">Smartsheet</h4>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-box-open text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-medium">SCORM Packaging</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-center text-indigo-600">Strategic Leadership</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-2">Team Management</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Leading cross-functional teams of designers, SMEs, and developers to deliver high-impact learning solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chess text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-2">Content Strategy</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Developing comprehensive learning strategies aligned with business objectives and learner needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-tasks text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-2">Process Improvement</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Streamlining development processes to increase efficiency while maintaining quality standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-pie text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-2">Data-Driven Design</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Leveraging analytics and feedback to continuously improve learning effectiveness and business impact.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-center text-indigo-600">Learning Methodologies</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Microlearning</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Gamification</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">VR Training</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Scenario-Based Learning</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Blended Learning</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Mobile Learning</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Adaptive Learning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">What Colleagues Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Director of Operations</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Charles transformed our warehouse training program from a compliance checkbox to an engaging experience that actually improved safety metrics. His ability to understand operational challenges and translate them into effective learning is unmatched."
+                    </p>
+                    <div class="mt-4 text-indigo-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">VP of Learning Technology</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Working with Charles on our LMS strategy was a game-changer. He brought both technical understanding of learning platforms and deep pedagogical knowledge. The roadmap he developed has guided our learning tech stack for three years running."
+                    </p>
+                    <div class="mt-4 text-indigo-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Training Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Charles's creativity in designing our service simulation training exceeded all expectations. The branching scenarios feel so realistic that employees forget they're in training. Our customer satisfaction scores have never been higher."
+                    </p>
+                    <div class="mt-4 text-indigo-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Let's Connect</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h3 class="text-xl font-semibold mb-6">Get In Touch</h3>
+                    <p class="text-gray-600 mb-8">
+                        Interested in discussing how I can help with your learning and development needs? Reach out via email or connect on LinkedIn.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Email</h4>
+                                <a href="mailto:charles.ehler@example.com" class="text-indigo-600 hover:underline">charles.ehler@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-linkedin-in text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">LinkedIn</h4>
+                                <a href="https://linkedin.com/in/charlesehler" target="_blank" class="text-indigo-600 hover:underline">linkedin.com/in/charlesehler</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Location</h4>
+                                <p class="text-gray-600">Chicago, IL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-6">Send a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none transition"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-indigo-400 mb-2">Charles Ehler</div>
+                    <p class="text-gray-400">Senior Instructional Designer & Learning Leader</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Charles Ehler. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Highlight active navigation link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100 && pageYOffset < sectionTop + sectionHeight - 100) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
