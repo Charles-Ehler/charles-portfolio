@@ -178,7 +178,7 @@
                 <div class="relative h-48 overflow-hidden">
                     <img src="Project1.jpg" alt="Warehouse Safety Poster Series" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
-                        <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Posters</a>
+                        <a href="javascript:void(0);" onclick="openModal()" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Posters</a>
                     </div>
                 </div>
                 <div class="p-6">
@@ -197,7 +197,7 @@
                 <div class="relative h-48 overflow-hidden">
                     <img src="Project2.jpg" alt="Branching Leadership Simulation Demo" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
-                        <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Demo</a>
+                        <a href="javascript:void(0);" onclick="openModal()" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Demo</a>
                     </div>
                 </div>
                 <div class="p-6">
@@ -216,7 +216,7 @@
                 <div class="relative h-48 overflow-hidden">
                     <img src="Project3.jpg" alt="Product Quick Facts Mobile Card Deck" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
-                        <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Cards</a>
+                        <a href="javascript:void(0);" onclick="openModal()" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Cards</a>
                     </div>
                 </div>
                 <div class="p-6">
@@ -235,7 +235,7 @@
                 <div class="relative h-48 overflow-hidden">
                     <img src="Project4.jpg" alt="Internal Tool Training Landing Page" class="w-full h-full object-cover">
                     <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition">
-                        <a href="#" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Page</a>
+                        <a href="javascript:void(0);" onclick="openModal()" class="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">View Pages</a>
                     </div>
                 </div>
                 <div class="p-6">
@@ -613,5 +613,26 @@
             });
         });
     </script>
+<!-- Modal -->
+<div id="confidentialModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg p-6 max-w-md mx-auto shadow-lg text-center">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Project Access</h2>
+        <p class="text-gray-600 mb-6">
+            Due to confidentiality of projects, project portfolio available upon request.
+        </p>
+        <button onclick="closeModal()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+            Close
+        </button>
+    </div>
+</div>
+    <script>
+  function openModal() {
+    document.getElementById('confidentialModal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('confidentialModal').classList.add('hidden');
+  }
+</script>
 </body>
 </html>
